@@ -1,0 +1,114 @@
+.list-container {
+    min-width: 360px;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    padding-top: 0px;
+    gap: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    /* border: 1px solid green; */
+}
+
+
+/* =======================
+MAIN LIST
+======================= */
+.lm-content {
+
+    height: 80vh;
+    width: 100%;
+    padding: 15px 0px;
+    padding-bottom: 60px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lm-des {
+    width: 100%;
+    /* border: 1px solid red; */
+    gap: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lm-des h3 {
+    font-weight: bold;
+    color: var(--res-color);
+}
+
+.lm-des p {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* =======================
+CATEGORY CARD
+======================= */
+.lm-category {
+    width: 90%;
+    margin-top: 20px;
+
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.list-card {
+    padding: 10px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-img {
+    width: 100px;
+    height: 80px;
+
+
+    border-radius: 50%;
+    border: 1px solid var(--res-color-soft2);
+    box-shadow: var(--medium-shadow);
+
+    background-color: var(--color-bg);
+}
+
+.list-img:hover,
+.list-img:active {
+    background-color: var(--res-color);
+    /* border: 1px solid var(--res-color); */
+}
+
+.list-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.list-card h4 {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: var(--font-body);
+    letter-spacing: .5px;
+    width: 100%;
+    text-align: center;
+}
