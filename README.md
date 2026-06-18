@@ -1,4 +1,4 @@
-# 🍃 Tea & Tarts
+# Douce Delice Bakeries
 
 A modern digital tea menu built with React, designed to provide customers with a smooth and elegant browsing experience for exploring handcrafted tea selections.
 

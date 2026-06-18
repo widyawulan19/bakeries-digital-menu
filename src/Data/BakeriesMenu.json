@@ -1,0 +1,135 @@
+[
+    {
+        "category": "BROWNIES",
+        "items": [
+            {
+                "title": "Brownie Pequeño",
+                "desc": "A rich and fudgy chocolate brownie baked with premium cocoa.",
+                "price": "$10",
+                "tags": "popular",
+                "menuPicks": [
+                    "guest"
+                ]
+            },
+            {
+                "title": "Brownie Mediano",
+                "desc": "Classic chocolate brownie with a moist texture and deep cocoa flavor.",
+                "price": "$15",
+                "tags": "",
+                "menuPicks": []
+            },
+            {
+                "title": "Brownie Grande",
+                "desc": "Large-sized brownie perfect for sharing with friends and family.",
+                "price": "$20",
+                "tags": "",
+                "menuPicks": [
+                    "chef"
+                ]
+            },
+            {
+                "title": "Brownie Box Small",
+                "desc": "Box of 6 small brownies, ideal for gifting and celebrations.",
+                "price": "$75",
+                "tags": "",
+                "menuPicks": []
+            },
+            {
+                "title": "Brownie Box Medium",
+                "desc": "Box of 6 medium brownies prepared fresh daily.",
+                "price": "$105",
+                "tags": "",
+                "menuPicks": []
+            },
+            {
+                "title": "Brownie Box Large",
+                "desc": "Box of 6 large brownies with rich chocolate flavor.",
+                "price": "$135",
+                "tags": "",
+                "menuPicks": [
+                    "chef"
+                ]
+            }
+        ]
+    },
+    {
+        "category": "BROOKIES",
+        "items": [
+            {
+                "title": "Brookie Small",
+                "desc": "A delightful combination of brownie and cookie in a small size.",
+                "price": "$20",
+                "tags": "",
+                "menuPicks": []
+            },
+            {
+                "title": "Brookie Medium",
+                "desc": "Soft cookie layers combined with rich brownie filling.",
+                "price": "$25",
+                "tags": "popular",
+                "menuPicks": [
+                    "guest"
+                ]
+            },
+            {
+                "title": "Brookie Large",
+                "desc": "A generously sized brookie perfect for sharing.",
+                "price": "$30",
+                "tags": "",
+                "menuPicks": [
+                    "chef"
+                ]
+            }
+        ]
+    },
+    {
+        "category": "CROOKIES",
+        "items": [
+            {
+                "title": "Classic Crookie",
+                "desc": "A buttery croissant filled with delicious cookie dough.",
+                "price": "$65",
+                "tags": "popular",
+                "menuPicks": [
+                    "guest"
+                ]
+            },
+            {
+                "title": "Nutella Crookie",
+                "desc": "Croissant-cookie fusion filled with rich Nutella spread.",
+                "price": "$75",
+                "tags": "popular",
+                "menuPicks": [
+                    "guest",
+                    "chef",
+                    "baker"
+                ]
+            },
+            {
+                "title": "Kinder Bueno Crookie",
+                "desc": "Filled with creamy Kinder Bueno flavor and crunchy texture.",
+                "price": "$80",
+                "tags": "",
+                "menuPicks": [
+                    "chef"
+                ]
+            },
+            {
+                "title": "Cream Cheese Crookie",
+                "desc": "A smooth cream cheese filling wrapped in buttery pastry.",
+                "price": "$75",
+                "tags": "",
+                "menuPicks": []
+            },
+            {
+                "title": "Brownie Crookie",
+                "desc": "A decadent crookie with rich brownie filling.",
+                "price": "$75",
+                "tags": "",
+                "menuPicks": [
+                    "guest"
+                ]
+            }
+        ]
+    }
+]

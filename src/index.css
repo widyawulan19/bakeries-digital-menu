@@ -3,11 +3,15 @@
 ========================= */
 :root {
 
-  --color-bg: #EDEDED;
+  --color-bg: #F5EFE5;
+  --color-bg-primary: #D8B892;
+  --color-accent: #6D4C2F;
+  --color-accent-soft: #A67C52;
 
   /* Text */
   --color-text-primary: #2B2B2B;
   --color-text-secondary: #6F6F6F;
+  --color-text-accent: #484244;
 
   /* Divider / Border */
   --color-border: #CFC8BD;
@@ -31,6 +35,11 @@
   /* Font Family */
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Open Sans', sans-serif;
+
+  /* bakeries font  */
+  --font-lora: "Lora", serif;
+
+
 
   /* 🔤 TYPOGRAPHY */
   --text-xl: 1.5rem;

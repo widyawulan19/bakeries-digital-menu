@@ -1,33 +1,26 @@
 import React from 'react'
 import '../Styles/Tea/Recommendation.css'
-import teaMenu from '../Data/TeaMenu.json'
+import bakeriesMenu from '../Data/BakeriesMenu.json'
 
 import { FaFire } from "react-icons/fa";
 import { TbCloverFilled } from "react-icons/tb";
 import { BsLeafFill } from "react-icons/bs";
 
-import img1 from '../Assets/Recommendation/darjeeling.svg'
-import img2 from '../Assets/Recommendation/Ceylon.svg'
-import img3 from '../Assets/Recommendation/bancha.svg'
-import img4 from '../Assets/Recommendation/Mint_Tea.svg'
-import img5 from '../Assets/cat4.svg'
-import img6 from '../Assets/Recommendation/early_grey.svg'
-import img7 from '../Assets/Recommendation/rooibos_vanilla.svg'
-import img8 from '../Assets/Recommendation/vanillagrape.svg'
-import img9 from '../Assets/Recommendation/africa.svg'
-
+import img1 from '../Assets/rec1.png'
+import img2 from '../Assets/rec2.png'
 
 
 
 function Recommendation() {
 
   // Flatten semua item menu
-  const allMenus = teaMenu.flatMap(menu => menu.items)
+  const allMenus = bakeriesMenu.flatMap(menu => menu.items)
 
   // Ambil chef favorite (1 item)
-  const chefPick = allMenus.find(item =>
-    item.menuPicks?.includes("master's pick")
+  const chefPick = allMenus.filter(item =>
+    item.menuPicks?.includes("chef")
   )
+
 
   // Ambil guest favorites (bisa banyak)
   const guestPicks = allMenus.filter(item =>
@@ -35,21 +28,14 @@ function Recommendation() {
   )
 
   //Ambil more chef fav
-  const morePick = allMenus.filter(item => 
-    item.menuPicks?.includes("more")
+  const bakerPick = allMenus.find(item =>
+    item.menuPicks?.includes("baker")
   )
 
   // Mapping gambar berdasarkan title
   const menuImages = {
-    "Darjeeling": img1,
-    "Ceylon & India":img2,
-    "Bancha":img3,
-    "Moroccan Mint":img4,
-    "Lemon Herbal":img5,
-    "Earl Grey": img6,
-    "Rooibos":img7,
-    "White Vanilla Grapefruit":img8,
-    "African Chai":img9
+    "Nutella Crookie": img1,
+    "Classic Crookies":img2,
   }
 
   return (
@@ -61,26 +47,24 @@ function Recommendation() {
 
         <div className="chef-badge">
           <p>
-            🍃 Tea Master's Pick
+            FEATURED PICK
           </p>
         </div>
 
-        {chefPick && (
+        {bakerPick && (
           <div className="chef-card">
-
-            <h4>{chefPick.name}</h4>
-
-            <p>{chefPick.description}</p>
-
-            {/* <span>{chefPick.price}</span> */}
-
             <div className="pic-img">
               <img
-                src={menuImages[chefPick.name]}
-                alt={chefPick.name}
+                src={img1}
+                alt='baker pick'
               />
             </div>
-
+            <div className="chef-desc">
+              <h4>{bakerPick.title} 
+                  <span>{bakerPick.price}</span>
+              </h4>
+              <p>{bakerPick.desc}</p>
+            </div>
           </div>
         )}
 
@@ -89,14 +73,13 @@ function Recommendation() {
       {/* GUEST FAVORITES */}
       <div className="guest-pick">
 
-        <div className="guest-badge">
-          <p>
-            <BsLeafFill />
-            Loved by Our Guests
-          </p>
-        </div>
-
         <div className="guest-wrapper">
+          <div className="guest-pic">
+            <img
+              src={img2}
+              alt='chef pick'
+            />
+          </div>
 
           {guestPicks.map((item, index) => (
 
@@ -104,21 +87,14 @@ function Recommendation() {
               className="guest-box"
               key={index}
             >
+              <div className="chef-desc">
 
-              <div className="guest-pic">
-                <img
-                  src={menuImages[item.name]}
-                  alt={item.name}
-                />
-              </div>
+                <h4>
+                  {item.title}
+                  <span>{item.price}</span>
+                </h4>
 
-              <div className="guest-desc">
-
-                <h4>{item.name}</h4>
-
-                <p>{item.description}</p>
-
-                {/* <span>{item.price}</span> */}
+                <p>{item.desc}</p>
 
               </div>
 
@@ -132,36 +108,29 @@ function Recommendation() {
       {/* CHEFT FAVORITES */}
       <div className="guest-pick">
 
-        <div className="mc-badge">
+        <div className="guest-badge">
           <p>
-            <BsLeafFill />
-            More chef Recommendations
+            MORE CHEF RECOMMENDATIONS
           </p>
         </div>
 
         <div className="guest-wrapper">
 
-          {morePick.map((item, index) => (
+          {chefPick.map((item, index) => (
 
             <div
               className="guest-box"
               key={index}
             >
 
-              <div className="guest-pic">
-                <img
-                  src={menuImages[item.name]}
-                  alt={item.name}
-                />
-              </div>
+              <div className="chef-desc">
 
-              <div className="guest-desc">
+                <h4>
+                  {item.title}
+                  <span>{item.price}</span>
+                </h4>
 
-                <h4>{item.name}</h4>
-
-                <p>{item.description}</p>
-
-                {/* <span>{item.price}</span> */}
+                <p>{item.desc}</p>
 
               </div>
 

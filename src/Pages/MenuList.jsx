@@ -1,17 +1,16 @@
 import React from 'react'
 import '../Styles/Tea/MenuList.css'
+import '../Styles/ListMenu.css'
 
-import { GiTeapot } from "react-icons/gi";
+import { FaThumbsUp } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
 
 import teaMenu from '../Data/TeaMenu.json';
+import bakeriesMenu from '../Data/BakeriesMenu.json'
 
-import cat1 from '../Assets/cat1.png'
-import cat2 from '../Assets/cat2.svg'
-import cat3 from '../Assets/cat3.svg'
-import cat4 from '../Assets/cat4.svg'
-import cat5 from '../Assets/cat5.svg'
-import cat6 from '../Assets/cat6.svg'
+import cat1 from '../Assets/mc1.png'
+import cat2 from '../Assets/mc2.png'
+import cat3 from '../Assets/mc3.png'
 
 import MenuNavbar from '../Components/MenuNavbar';
 
@@ -21,12 +20,9 @@ function MenuList({
 }) {
 
     const categoryPic = {
-        "Black Tea": cat1,
-        "Green Tea": cat2,
-        "Herbal Tea": cat3,
-        "Specialty Tea": cat4,
-        "Tea Latte": cat5,
-        "Coffee": cat6
+        "BROWNIES": cat1,
+        "BROOKIES": cat2,
+        "CROOKIES": cat3
     };
 
     // Tampilkan list category dulu
@@ -38,16 +34,16 @@ function MenuList({
 
                     <div className="lm-des">
                         <h3>
-                            Discover Your Perfect Tea
+                            DISCOVER OUR BAKERY
                         </h3>
 
                         <p>
-                            Explore handcrafted tea selections curated for every mood — from bold black tea to calming herbal infusions.
+                            Explore our handcrafted sweet treats—freshly baked every day with carefully selected ingredients.
                         </p>
                     </div>
 
                     <div className="lm-category">
-                        {teaMenu.map((item, index) => (
+                        {bakeriesMenu.map((item, index) => (
                             <div
                                 className="list-card"
                                 key={index}
@@ -62,7 +58,7 @@ function MenuList({
                                     />
                                 </div>
 
-                                <h4>{item.category}</h4>
+                                {/* <h4>{item.category}</h4> */}
                             </div>
                         ))}
                     </div>
@@ -73,7 +69,7 @@ function MenuList({
         )
     }
 
-    const currentCategory = teaMenu.find(
+    const currentCategory = bakeriesMenu.find(
         item => item.category === selectedCategory
     );
 
@@ -90,11 +86,14 @@ function MenuList({
 
                 {/* BADGE CATEGORY */}
                 <div className="ml-badge">
-                    <div className="ml-icon" onClick={() => setSelectedCategory(null)}>
-                        <IoIosArrowBack/>
+                    <div className="badge-nav">
+                        <div className="ml-icon" onClick={() => setSelectedCategory(null)}>
+                            <IoIosArrowBack/>
+                        </div>
+                        <h2>{currentCategory.category}</h2>
+                        <IoIosArrowBack style={{color:'#F5EFE5'}}/>
                     </div>
-                    <h2>{currentCategory.category}</h2>
-
+                    
                     <div className="ml-img">
                         <img
                             src={categoryPic[currentCategory.category]}
@@ -103,20 +102,6 @@ function MenuList({
                     </div>
                 </div>
 
-                {/* PRICE */}
-                <div className="price-box">
-                    {currentCategory.price.map((itm, idx) => (
-                        <div className="size-price" key={idx}>
-                            <div className="price-tag">
-                                {itm.size} :
-                            </div>
-
-                            <div className="price">
-                                {itm.priceSize}
-                            </div>
-                        </div>
-                    ))}
-                </div>
 
                 {/* MENU */}
                 <div className="menu-box">
@@ -132,16 +117,20 @@ function MenuList({
                                             : ""
                                     }
                                 >
-                                    {menu.name}
+                                    {menu.title}
+
+                                    {menu.tags === "popular" && (
+                                        <FaThumbsUp className="popular-icon" />
+                                    )}
                                 </h4>
 
-                                {menu.tags === "popular" && (
-                                    <GiTeapot className="popular-icon" />
-                                )}
+                                
+
+                                <span>{menu.price}</span>
 
                             </div>
 
-                            <p>{menu.description}</p>
+                            <p>{menu.desc}</p>
 
                         </div>
                     ))}

@@ -3,6 +3,7 @@
     width: 100%;
     height: 100vh;
     padding: 20px;
+    padding-top: 0px;
     gap: 10px;
 
     display: flex;
@@ -14,8 +15,8 @@
     background-size: cover; */
 
 
-    /* border: 1px solid red;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    /* border: 1px solid red; */
+    /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
     position: relative;
 }
 
@@ -37,41 +38,41 @@ BADGE CATEGORY
 
 .ml-badge {
     width: 100%;
-    padding: 10px 15px;
-    padding-left: 5px;
-    background-color: var(--res-color);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 10px;
     border-radius: 8px;
-    box-shadow: var(--medium-shadow);
     position: relative;
 }
 
+.badge-nav {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .ml-badge .ml-icon {
-    color: #fff;
+    color: var(--color-text-accent);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .ml-badge h2 {
-    font-size: 18px;
-    font-weight: bold;
-
-    color: #fff;
+    font-size: 15px;
+    /* font-weight: bold; */
+    letter-spacing: 1px;
+    color: var(--color-text-accent);
 }
 
 .ml-img {
-    position: absolute;
-    top: 5 !important;
-    right: 5%;
-    z-index: 99;
-
-    width: 100px;
-    height: 70px;
+    padding-left: 5px;
+    width: 100% !important;
+    height: 150px;
 }
 
 .ml-img img {
@@ -127,7 +128,7 @@ LIST MENU CONTENT
     padding-bottom: 70px;
     overflow-y: auto;
 
-    gap: 20px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,37 +139,74 @@ LIST MENU CONTENT
 .ml-box {
     width: 100% !important;
     padding: 5px 0px;
-    border-bottom: 1px solid var(--res-color-opacity);
+    padding-bottom: 10px;
+    border-bottom: 0.2px solid var(--res-color-opacity);
+    /* border: 1px solid red; */
 
 }
 
 .menu-title {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+
+    /* border: 1px solid red; */
+
 }
 
 .ml-box h4 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
-    padding: 4px 0px;
-    color: var(--color-text-primary);
+    margin-bottom: 7px;
+    color: var(--color-text-accent);
+}
 
+.ml-box span {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-text-accent);
 }
 
 .ml-box p {
-    font-size: 13px;
-    color: var(--res-color);
+    /* border: 1px solid red; */
+    width: 90%;
+    font-size: 12px;
+    font-family: var(--font-lora);
+    color: var(--res-color-accent);
 }
 
 .ml-box .popular-title {
-    background-color: var(--res-color-opacity);
-    padding: 4px 10px 4px 0;
-    display: inline-block;
+    background-color: #e2d6c3;
+    padding: 5px;
+    font-style: italic;
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .popular-icon {
     margin-left: 10px;
-    color: var(--res-color);
-    font-size: 25px;
+    color: var(--color-accent);
+    font-size: 18px;
 }
+
+
+
+/* =======================
+LIST CONTAINER
+======================= */
+.list-container {}
+
+/* 
+.lm-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+.lm-des h3 {}
+
+.lm-des p {}

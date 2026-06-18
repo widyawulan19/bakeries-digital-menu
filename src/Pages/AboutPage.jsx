@@ -1,7 +1,8 @@
 import React from 'react'
 import '../Styles/About.css'
 import img from '../Assets/maps.svg'
-import { FaMapPin } from "react-icons/fa6";
+import imglogo from '../Assets/logomain.png'
+import { FaCircleCheck , FaMapPin } from "react-icons/fa6";
 
 function AboutPage() {
   return (
@@ -10,32 +11,48 @@ function AboutPage() {
 
         {/* ABOUT */}
         <div className="section-title">
-          <h3>🍃 About Tea & Tarts</h3>
+          <h3> ABOUT</h3>
+          <div className="section-img">
+            <img src={imglogo} alt="logo" />
+          </div>
         </div>
 
         <div className="about-desc">
           <p>
-            Tea & Tarts is a cozy tea house dedicated to bringing people
-            together through handcrafted tea blends, comforting pastries,
-            and relaxing moments. From classic black teas to unique herbal
-            infusions, every cup is carefully selected to create a warm and
-            memorable experience.
+            At Douce Delice, we believe that every pastry should bring warmth, comfort, and joy.
+
+            Inspired by traditional baking techniques and crafted with carefully selected ingredients, our bakery offers a delightful selection of brownies, brookies, crookies, and specialty treats.
+
+            Every item is freshly prepared to create memorable moments for our guests.
           </p>
         </div>
 
-        {/* OPENING HOURS */}
-        <div className="section-title">
-          <h3>Opening Hours</h3>
+        <div className="why-box">
+          <h3>WHY CHOOSE DOUCE ?</h3>
+          <div className="why-list">
+            <p> <FaCircleCheck className='check-icon'/> Fresh Baked Daily</p>
+            <p> <FaCircleCheck className='check-icon'/> Premium Ingredients</p>
+            <p> <FaCircleCheck className='check-icon'/> Handcrafted With Care</p>
+            <p> <FaCircleCheck className='check-icon'/> Seasonal Specialities</p>
+          </div>
         </div>
 
-        <div className="opening-card">
-          <h4>Every Day</h4>
-          <p>9:00 AM — 8:00 PM</p>
+        {/* OPENING HOURS */}
+        <div className="opening-box">
+          <div className="section-title">
+            <h3>OPENING HOURS</h3>
+          </div>
+
+          <div className="opening-card">
+            <h4>Every Day</h4>
+            <p>9:00 AM — 8:00 PM</p>
+          </div>
         </div>
+        
 
         {/* LOCATION */}
         <div className="section-title">
-          <h3>Visit Us</h3>
+          <h3>VISIT US</h3>
         </div>
 
         <div className="about-loc">

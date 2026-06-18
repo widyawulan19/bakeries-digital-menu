@@ -2,10 +2,13 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import '../Styles/Components/Navbar.css'
 import imglogo from '../Assets/logotea.svg'
+import logodolce from '../Assets/logo3.png'
 
 // icons 
 import { IoAlertCircleOutline } from "react-icons/io5";
 import { GiTeapot } from "react-icons/gi";
+import { AiFillHome } from "react-icons/ai";
+
 
 
 function Navbar() {
@@ -21,13 +24,13 @@ function Navbar() {
 
   return (
     <div className="mp-nav">
-        <GiTeapot
-            size={30}
+        <AiFillHome
+            // size={30}
             className='mp-icon'
             onClick={navigateToWelcome}
         />
          <div className="mp-img">
-            <img src={imglogo} alt="logo image" />
+            <img src={logodolce} alt="logo image" />
          </div>
         <IoAlertCircleOutline 
             className='mp-icon-about'
